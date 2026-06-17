@@ -3,7 +3,6 @@ FROM quay.io/fedora/fedora-bootc:44
 RUN dnf update && dnf clean all
 
 #NFS installation
-RUN dnf install -y nfs-utils git && dnf clean all
-RUN systemctl enable nfs-server rpcbind
+RUN dnf install -y git && dnf clean all
 
 RUN git clone https://github.com/ggml-org/llama.cpp
