@@ -1,5 +1,4 @@
-FROM quay.io/fedora/fedora-bootc:44
-
+FROM 
 RUN dnf update && dnf clean all
 
 #git installation
@@ -7,3 +6,4 @@ RUN dnf install -y git && dnf clean all
 
 RUN git clone https://github.com/ggml-org/llama.cpp
 RUN cmake -B build -DGGML_CUDA=ON -DGGML_NATIVE=OFF
+
